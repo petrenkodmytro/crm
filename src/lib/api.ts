@@ -1,4 +1,5 @@
 import {
+  promotion,
   summaryCategories,
   summaryCountries,
   summaryPromotions,
@@ -49,6 +50,16 @@ export interface Company {
   avatar?: string;
 }
 
+export interface Promotion {
+  id: string;
+  title: string;
+  description: string;
+  discount: number;
+  companyId: string;
+  companyTitle: string;
+  avatar?: string;
+}
+
 // feth function
 export const getSummaryStats = () => {
   return Promise.resolve(summaryStats);
@@ -68,6 +79,10 @@ export const getSummaryCategories = () => {
 
 export const getSummaryCountries = () => {
   return Promise.resolve(summaryCountries);
+};
+
+export const getPromotions  = () => {
+  return Promise.resolve(promotion);
 };
 
 // -----------------
@@ -95,4 +110,8 @@ export const getCountries = (init?: RequestInit) => {
 
 export const getCompanies = (init?: RequestInit) => {
   return sendRequest<Company[]>(buildUrl('companies'), init);
+};
+
+export const getCompany = (id: string, init?: RequestInit) => {
+  return sendRequest<Company>(buildUrl('companies', id), init);
 };

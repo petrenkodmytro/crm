@@ -1,4 +1,5 @@
 'use client';
+// провайдер для клієнтської частини
 
 import React, { useMemo } from 'react';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
