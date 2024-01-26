@@ -8,9 +8,9 @@ import getCountById from '@/lib/utils/getCountById';
 export interface PageProps {}
 
 export default async function Page({}: PageProps) {
-  // const data = await getSummaryCountries();
+  const countries = await getSummaryCountries();
   // console.log(data);
-  const countries = await getCountries();
+  // const countries = await getCountries();
   // console.log(countries);
 
   return (

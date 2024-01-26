@@ -127,29 +127,34 @@ export const summaryCategories = [
 
 export const summaryCountries = [
   {
-    countryId: 1,
-    countryTitle: 'Canada',
-    count: 4,
+    title: 'Canada',
+    count: '7',
+    id: '1',
   },
   {
-    countryId: 2,
-    countryTitle: 'USA',
-    count: 4,
+    title: 'USA',
+    count: '11',
+    id: '2',
   },
   {
-    countryId: 3,
-    countryTitle: 'Italia',
-    count: 2,
+    title: 'Ukraine',
+    count: '9',
+    id: '3',
   },
   {
-    countryId: 4,
-    countryTitle: 'Ukraine',
-    count: 2,
+    title: 'Italy',
+    count: '5',
+    id: '4',
   },
   {
-    countryId: 5,
-    countryTitle: 'Spain',
-    count: 2,
+    title: 'Spain',
+    count: '8',
+    id: '5',
+  },
+  {
+    title: 'Poland',
+    count: '6',
+    id: '6',
   },
 ];
 
@@ -161,6 +166,13 @@ export const promotion = [
     discount: 30,
     companyId: '1312',
     companyTitle: 'SomeCompany',
-    avatar: 'https://img.freepik.com/free-vector/special-offer-modern-sale-banner-template_1017-20667.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705968000&semt=ais',
+    avatar:
+      'https://img.freepik.com/free-vector/special-offer-modern-sale-banner-template_1017-20667.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705968000&semt=ais',
   },
 ];
+
+
+
+// fetch('https://dummyjson.com/products/1')
+//   .then((res) => res.json())
+//   .then((json) => console.log(json));
