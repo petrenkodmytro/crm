@@ -14,9 +14,10 @@ export default function CompanyPromotions({
 }: CompanyPromotionsProps) {
   const { data } = useQuery({
     queryKey: ['promotions', companyId],
-    queryFn: () => getPromotions(),
+    queryFn: () => getPromotions({ companyId }),
     staleTime: 10 * 1000,
   });
+  console.log(data);
 
   return (
     <div className="grid grid-cols-12 gap-5">

@@ -3,7 +3,6 @@
 import CompanyForm from '@/app/components/company-form';
 import React from 'react';
 
-
 export interface PageProps {}
 
 export default function Page({}: PageProps) {

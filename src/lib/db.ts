@@ -157,22 +157,3 @@ export const summaryCountries = [
     id: '6',
   },
 ];
-
-export const promotion = [
-  {
-    id: '2332',
-    title: 'Promotion',
-    description: 'Lorem  ipsum',
-    discount: 30,
-    companyId: '1312',
-    companyTitle: 'SomeCompany',
-    avatar:
-      'https://img.freepik.com/free-vector/special-offer-modern-sale-banner-template_1017-20667.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705968000&semt=ais',
-  },
-];
-
-
-
-// fetch('https://dummyjson.com/products/1')
-//   .then((res) => res.json())
-//   .then((json) => console.log(json));

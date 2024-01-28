@@ -22,7 +22,7 @@ export default async function Page({ params }: PageProps) {
   await queryClient.prefetchQuery({
     queryKey: ['promotions', params.id],
     queryFn: () =>
-      getPromotions(),
+      getPromotions({ companyId: params.id }, { cache: 'no-store' }),
     staleTime: 10 * 1000,
   });
 
@@ -46,6 +46,3 @@ export default async function Page({ params }: PageProps) {
     </HydrationBoundary>
   );
 }
-
-
-// [...id] => синтаксис використовується для визначення динамічних маршрутів

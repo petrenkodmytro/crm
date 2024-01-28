@@ -1,5 +1,4 @@
 import {
-  promotion,
   summaryCategories,
   summaryCountries,
   summaryPromotions,
@@ -60,7 +59,7 @@ export interface Promotion {
   avatar?: string;
 }
 
-// feth function
+// promisies function
 export const getSummaryStats = () => {
   return Promise.resolve(summaryStats);
 };
@@ -81,11 +80,7 @@ export const getSummaryCountries = () => {
   return Promise.resolve(summaryCountries);
 };
 
-// export const getPromotions = () => {
-//   return Promise.resolve(promotion);
-// };
-
-// -----------------
+// fetch functions
 
 const PROJECT_TOKEN = process.env.NEXT_PUBLIC_PROJECT_TOKEN;
 
