@@ -9,12 +9,13 @@ export interface CompanyFormModalProps extends ModalProps {
 }
 
 export default function CompanyFormModal({
+  onClose,
   onSubmit,
   ...rest
 }: CompanyFormModalProps) {
   return (
-    <Modal {...rest}>
-      <CompanyForm onSubmit={onSubmit} />
+    <Modal {...rest} onClose={onClose}>
+      <CompanyForm onSubmit={() => onClose()} />
     </Modal>
   );
 }

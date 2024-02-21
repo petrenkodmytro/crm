@@ -6,6 +6,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 export default function Providers({ children }: React.PropsWithChildren) {
+  // створюємо клієнт один раз
   const client = useMemo(() => new QueryClient(), []);
 
   return (
@@ -15,3 +16,5 @@ export default function Providers({ children }: React.PropsWithChildren) {
     </QueryClientProvider>
   );
 }
+
+// треба відрендерити цей компонент в рутлайауті

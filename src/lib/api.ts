@@ -140,6 +140,7 @@ export const createPromotion = async (
   data: Omit<Promotion, 'id'>,
   init?: RequestInit,
 ) => {
+  console.log('add', data);
   return sendRequest<Promotion>(buildUrl('promotions'), {
     method: 'POST',
     body: JSON.stringify(data),

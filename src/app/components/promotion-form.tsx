@@ -29,6 +29,7 @@ export default function PromotionForm({
   companyId,
   onSubmit,
 }: PromotionFormProps) {
+  
   const queryClient = useQueryClient();
 
   const { data: company } = useQuery({
@@ -51,26 +52,28 @@ export default function PromotionForm({
       });
     },
   });
-
+  // виклик мутації
   const handleSubmit = async (values: PromotionFieldValues) => {
     if (!company) {
       return;
     }
-
+    console.log(values);
     await mutateAsync({
       ...values,
       discount: Number(values.discount) || 0,
       companyId: company.id,
       companyTitle: company.title,
+      avatar: 'https://t4.ftcdn.net/jpg/02/95/29/57/360_F_295295765_Xl4gDnZFPkYVb2xOt6SwJrUcPKGdTkhr.jpg'
     });
 
     if (onSubmit) {
-      onSubmit(values);
+      onSubmit(values)
+      
     }
   };
 
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+    <Formik initialValues={initialValues} onSubmit={handleSubmit} >
       <Form className="flex flex-col gap-10">
         <p className="mb-0.5 text-xl">Add new promotion</p>
         <div className="flex flex-col gap-5">
